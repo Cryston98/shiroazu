@@ -1,3 +1,4 @@
+
 <style>
     #wrap-player{
 	flex:1;
@@ -31,10 +32,21 @@
     
 <div id="wrap-player">
 	<div id="list-player">
-	    <div id="player1" class="playerItem">Mp4Upload</div>
-    	    <div id="player2" class="playerItem">Vimeo</div>
-    	    <div id="player3" class="playerItem">Mega</div>
-     	    <div id="player4" class="playerItem">Abbys</div>
-    	    <div id="player5" class="playerItem">Rumble</div>
+	    <div id="player1" onclick="changeSourceJS('url_sursa1')" class="playerItem">Mp4Upload</div>
+    	    <div id="player2" onclick="changeSourceJS('url_sursa2')" class="playerItem">Vimeo</div>
+    	    <div id="player3" onclick="changeSourceJS('url_sursa3')" class="playerItem">Mega</div>
+     	    <div id="player4" onclick="changeSourceJS('url_sursa4')" class="playerItem">Abbys</div>
+    	    <div id="player5" onclick="changeSourceJS('url_sursa5')" class="playerItem">Rumble</div>
 	</div>
 </div>
+
+
+<iframe id="video-player" src="https://voe.sx/e/virpd6eh0m9h" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+
+<script>
+
+function changeSourceJS(urlData) {
+    const player = document.getElementById("video-player"); 
+    player.src = urlData; 
+}
+</script>
